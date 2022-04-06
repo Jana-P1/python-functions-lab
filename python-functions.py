@@ -46,19 +46,41 @@ largest([10, 4, 2, 231, 91, 54])
     # count = count + 1
 
 def occurrences(str1, str2):
-  count = 0
-  for char in str1:
-    if char == str2:
-      count = count + 1
+  # count = 0
+  # for char in str1:
+  #   if char == str2:
+  #     count = count + 1
     
-  print(f'{str2} appears {count} times in {str1}')
+  # print(f'{str2} appears {count} times in {str1}')
+  newString = str1.replace(str2, "")
+  print(len(str1) - len(newString)) 
 
-# occurrences('fleep floop', 'e')   # returns 2
-# occurrences('fleep floop', 'p')   # returns 2
+occurrences('fleep floop', 'e')   # returns 2
+occurrences('fleep floop', 'p')   # returns 2
 occurrences('fleep floop', 'ee')  # returns 1
-# occurrences('fleep floop', 'fe')
+occurrences('fleep floop', 'fe')
 
-# 4. def function(args)
+# 4. product(args)
+# def product(*args)
+  # multiply each argument to each other
+    # use for loop to access each argument 
+    # initialize a product variable to 1  
+      # 1 * # = #     
+  # print the product
+
+def product(*args):
+  product = 1
+  for arg in args:
+    product = product * arg
+  print(product)
+
+product(-1, 4)
+product(2, 5, 5)
+product(4, 0.5, 5)
+
+
+
+
 
 
 
